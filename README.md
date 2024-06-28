@@ -1,9 +1,23 @@
-# Vue 3 + TypeScript + Vite
+# ReadMe
+智慧果业大屏项目前端，22计算机0102达标内容 前端
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+> 更新ing
 
-## Recommended Setup
+### 2024-06-28
+1. 更新用户管理页面数据表格
+2. 基于Restful API和抽屉完成用户更新功能。
+3. 基于Restful API完成用户删除功能。
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+## 快速开始
 
-- Use [vue-tsc](https://github.com/vuejs/language-tools/tree/master/packages/tsc) for performing the same type checking from the command line, or for generating d.ts files for SFCs.
+```shell
+cd bigScreen-Flask
+npm i
+npm run dev
+```
+
+## 意见和反馈
+:e-mail: zhangqiuqian01@gmail.com
+```text
+请通过邮箱给我更多的意见和反馈
+```

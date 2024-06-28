@@ -6,8 +6,7 @@ import RightSide from "../components/big-screen/RightSide.vue";
 import Bottom from "../components/big-screen/Bottom.vue";
 import Neck from "../components/big-screen/Neck.vue";
 import {onMounted} from "vue";
-import httpRequest from "../api/http.ts";
-import router from "../router";
+import {auth} from "../utils/common.ts"
 
 const getScale = (width=2180, height=1080) => {
   // 计算宽高比例（相对于我浏览器全屏）
@@ -18,19 +17,9 @@ const getScale = (width=2180, height=1080) => {
   return windowWidth < windowHeight ? windowWidth : windowHeight
 }
 
-const auth = () => {
-  httpRequest({
-    url: '/auth',    // 请求路由(地址)
-    method: 'post',   // 请求方式
-  }).then( (res) => {
-    const code = (res as any).code
-    // code < 0 表示认证失败，跳转到登录页面
-    if (code < 0) { router.replace('/login')}
-    })
-}
 
 onMounted(() => {
-  // auth()  // 页面加载前， 先校验登录，请求/auth接口
+  auth()  // 页面加载前， 先校验登录，请求/auth接口
   let mainContainer = document.getElementById('main-container') || new HTMLDivElement()
   mainContainer.style.transform = `scale(${getScale()}) translate(-50%, -50%)`
 })

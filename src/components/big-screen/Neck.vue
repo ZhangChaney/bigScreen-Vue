@@ -8,7 +8,7 @@ import { BorderBox8 as DvBorderBox8 } from '@kjgl77/datav-vue3'
       <dv-button  border="Border5" color="orange">智慧果业</dv-button>
       <dv-button  border="Border5" color="pink">智慧医疗</dv-button>
       <dv-button  border="Border5" color="lightgreen">智慧政务</dv-button>
-      <dv-button  border="Border5" color="yellow">数据中心</dv-button>
+      <dv-button  border="Border5" color="yellow"><RouterLink to="/admin">数据中心</RouterLink></dv-button>
     </div>
   </dv-border-box8>
 </template>
@@ -20,5 +20,10 @@ import { BorderBox8 as DvBorderBox8 } from '@kjgl77/datav-vue3'
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
 }
 </style>

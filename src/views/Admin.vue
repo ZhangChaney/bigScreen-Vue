@@ -8,8 +8,8 @@
               <el-icon><user /></el-icon>用户管理
             </template>
             <el-menu-item-group style="background-color: darkorange; font-weight: bolder">
-              <el-menu-item index="1-1"><RouterLink to="/userManage">用户管理</RouterLink></el-menu-item>
-              <el-menu-item index="1-2"><RouterLink to="/userAdd">添加用户</RouterLink></el-menu-item>
+              <el-menu-item index="1-1"><RouterLink :to="{name: 'userManage'}">用户管理</RouterLink></el-menu-item>
+              <el-menu-item index="1-2"><RouterLink :to="{name: 'userAdd'}">添加用户</RouterLink></el-menu-item>
             </el-menu-item-group>
 
           </el-sub-menu>
@@ -18,9 +18,9 @@
               <el-icon><icon-menu /></el-icon>数据中心
             </template>
             <el-menu-item-group style="background-color: darkorange; font-weight: bolder">
-              <el-menu-item index="2-1"><RouterLink to="/userManage">产值产量</RouterLink></el-menu-item>
-              <el-menu-item index="2-2"><RouterLink to="/userManage">种植区域</RouterLink></el-menu-item>
-              <el-menu-item index="2-3"><RouterLink to="/userManage">产业分布</RouterLink></el-menu-item>
+              <el-menu-item index="2-1"><RouterLink :to="{name: 'userManage'}">产值产量</RouterLink></el-menu-item>
+              <el-menu-item index="2-2"><RouterLink :to="{name: 'userManage'}">种植区域</RouterLink></el-menu-item>
+              <el-menu-item index="2-3"><RouterLink :to="{name: 'userManage'}">产业分布</RouterLink></el-menu-item>
             </el-menu-item-group>
           </el-sub-menu>
 
@@ -29,9 +29,9 @@
               <el-icon><setting /></el-icon>系统设置
             </template>
             <el-menu-item-group style="background-color: darkorange; font-weight: bolder">
-              <el-menu-item index="3-1"><RouterLink to="/userManage">产品文档</RouterLink></el-menu-item>
-              <el-menu-item index="3-2"><RouterLink to="/userManage">帮助中心</RouterLink></el-menu-item>
-              <el-menu-item index="3-3"><RouterLink to="/userManage">关于我们</RouterLink></el-menu-item>
+              <el-menu-item index="3-1"><RouterLink :to="{name: 'userManage'}">产品文档</RouterLink></el-menu-item>
+              <el-menu-item index="3-2"><RouterLink :to="{name: 'userManage'}">帮助中心</RouterLink></el-menu-item>
+              <el-menu-item index="3-3"><RouterLink :to="{name: 'userManage'}">关于我们</RouterLink></el-menu-item>
             </el-menu-item-group>
           </el-sub-menu>
         </el-menu>
@@ -72,6 +72,12 @@
 
 <script lang="ts" setup>
 import { Menu as IconMenu, User, Setting, Place } from '@element-plus/icons-vue'
+import {onMounted} from "vue";
+import {auth} from "../utils/common.ts";
+
+onMounted(() => {
+  auth()
+})
 
 </script>
 
@@ -80,7 +86,7 @@ a{
   text-decoration: none;
   color: black;
 }
-.layout-container-demo .el-header {
+.layout-container-demo {
   position: relative;
   background-color: var(--el-color-primary-light-7);
   color: var(--el-text-color-primary);

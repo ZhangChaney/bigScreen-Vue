@@ -25,12 +25,12 @@ const routes = [
         component: Admin,
         children: [
             {
-                path: '/userManage',
+                path: '/admin/userManage',
                 name: 'userManage',
                 component: UserManage,
             },
             {
-                path: '/userAdd',
+                path: '/admin/userAdd',
                 name: 'userAdd',
                 component: UserAdd,
             }

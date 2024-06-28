@@ -91,14 +91,14 @@ a{
   background-color: var(--el-color-primary-light-7);
   color: var(--el-text-color-primary);
 }
-.layout-container-demo .el-aside {
+.layout-container-demo  {
   color: var(--el-text-color-primary);
   background: var(--el-color-primary-light-8);
 }
-.layout-container-demo .el-menu {
+.layout-container-demo {
   border-right: none;
 }
-.layout-container-demo .el-main {
+.layout-container-demo {
   padding: 0;
 }
 .layout-container-demo .toolbar {
